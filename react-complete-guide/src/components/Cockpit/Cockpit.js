@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react';
 
-import classes from './Cockpit.css'
+import classes from './Cockpit.css';
+
+
 
 const cockpit = (props) => {
+
+  useEffect(() => {
+    console.log('[Cockpiy.js] useEffect' )
+  });
 
     const assignedClasses = [];
 
