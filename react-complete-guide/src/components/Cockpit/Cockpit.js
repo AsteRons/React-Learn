@@ -13,7 +13,11 @@ const cockpit = (props) => {
     setTimeout(() => {
         alert('Saved data to cloud!')
     }, 1000 );
-  }, [props.persons] );
+
+    return () => {
+      console.log('[Cockpiy.js] clean up wotk in useEffect' )
+    }
+  }, [] );
 
     const assignedClasses = [];
 

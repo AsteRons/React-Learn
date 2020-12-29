@@ -10,9 +10,9 @@ class Persons extends Component {
     //     return state;
     // }
 
-    componentWillReceiveProps(props){
-        console.log('[Persons.js] componentWillReceiveProps', props);
-    }
+    // componentWillReceiveProps(props){
+    //     console.log('[Persons.js] componentWillReceiveProps', props);
+    // }
 
     shouldComponentUpdate(nextProps, nextState){
 
@@ -25,11 +25,16 @@ class Persons extends Component {
         return {message: 'Snapshot!'};
     }
 
+    
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('[Persons.js] componentDidUpdate');
         console.log(snapshot);
     }
 
+
+    componentWillUnmount(){
+        console.log('[Persons.js] componentWillUnmount');
+    }
     render() {
         console.log('[Persons.js] rendering ...');
        return this.props.persons.map(( person, index ) => {
