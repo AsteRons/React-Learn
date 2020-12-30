@@ -15,9 +15,18 @@ const cockpit = (props) => {
     }, 1000 );
 
     return () => {
-      console.log('[Cockpiy.js] clean up wotk in useEffect' )
+      console.log('[Cockpiy.js] clean up work in useEffect');
     }
   }, [] );
+
+
+     useEffect(() => {
+      console.log('[Cockpiy.js] 2nd useEffect' );
+
+      return () => {
+        console.log('[Cockpiy.js] clean up work in  2nd useEffect');
+      }
+    });
 
     const assignedClasses = [];
 
