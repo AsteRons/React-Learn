@@ -9,16 +9,16 @@ axios.interceptors.request.use(request => {
     console.log(request);
     // Edit request config
     return request;
-}, error => {
+    }, error => {
     console.log(error);
     return Promise.reject(error);
 });
 
 axios.interceptors.response.use(response => {
     console.log(response);
-    // Edit request config
+    // Edit response config
     return response;
-}, error => {
+    }, error => {
     console.log(error);
     return Promise.reject(error);
 });

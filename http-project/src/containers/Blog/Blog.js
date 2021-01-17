@@ -17,23 +17,20 @@ class Blog extends Component {
     }
 
     componentDidMount () {
-
-        const posts = axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(response => {
+        axios.get( 'https://jsonplaceholder.typicode.com/posts' )
+            .then( response => {
                 const posts = response.data.slice(0, 4);
                 const updatedPosts = posts.map(post => {
-
                     return {
                         ...post,
                         author: 'Max'
                     }
                 });
-
                 this.setState({posts: updatedPosts});
-                // console.log(response);
-            })
+                // console.log( response );
+            } )
             .catch(error => {
-                //console.log(error);
+                // console.log(error);
                 this.setState({error: true});
             });
     }
@@ -47,7 +44,7 @@ class Blog extends Component {
 
         let posts = <p style = {{textAlign: 'center'}}>Something went wrong!</p>;
         if (!this.state.error) {
-            const posts = this.state.posts.map(post => {
+             posts = this.state.posts.map(post => {
                 return   <Post 
                 key = {post.id} 
                 title = {post.title} 
