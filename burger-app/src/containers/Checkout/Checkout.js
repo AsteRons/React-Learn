@@ -18,7 +18,7 @@ class Checkout extends Component {
         const ingredients = {};
         for(let param of query.entries()) {
             // ['salad', '1']
-            ingredient[param[0]]  = +param[1];
+            ingredients[param[0]]  = +param[1];
         }
         this.setState({ingredients: ingredients});
     }
