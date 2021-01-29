@@ -131,7 +131,7 @@ class BurgerBuilder extends Component {
 
     const queryParams = [];
     for (let i in this.state.ingredients) {
-        queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.setState.ingredients[i]));
+        queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
     }
 
     const queryString= queryParams.join('&');
@@ -180,9 +180,9 @@ class BurgerBuilder extends Component {
         // {salad: true, meat: false, ...}
         return (
             <Aux>
-                <Modal show={this.state.purchasing} modalClosed = {this.purchaseCancelHandler}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     {orderSummary}
-                </Modal> 
+                </Modal>
                 {burger}
             </Aux>
         );
