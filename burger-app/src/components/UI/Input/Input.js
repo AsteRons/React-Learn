@@ -21,7 +21,6 @@ const input = (props) => {
     <div className = {classes.Input}>
         <label className = {classes.Label}>{props.label}</label>
         {inputElement}
-        <input/>
     </div>);
     
     };
