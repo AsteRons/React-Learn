@@ -42,9 +42,10 @@ const input = (props) => {
             break;
         default:
             inputElement = <input 
-                className={inputClasses} 
+                className={inputClasses.join(' ')} 
                 {...props.elementConfig}
-                value = {props.value}/>;
+                value = {props.value}
+                onChange={props.changed}/>;
     }
 
     return (
