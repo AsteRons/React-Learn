@@ -2,8 +2,8 @@ const initialState = {
     counter: 0
 }
 
-const reducer = (sotre = initialState, action) => {
-    return sotre;
+const reducer = (state = initialState, action) => {
+    return state;
 };
 
 export default reducer;
